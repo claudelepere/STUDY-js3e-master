@@ -10,19 +10,8 @@
 //	    crossorigin="anonymous"></script>
 <script>
 $(document).ready(function() {
-//  var v = $('#errors').html();
-//  var v = $('#errors').html('<p>There are four errors in this form</p>');
-//  console.log(v);
-//  var vv = $('#errors').text();
-//  console.log(vv);
-//  $('#errors').text('zozo');
-//  var v1 = $('#errors1').html();
-//  console.log(v1);
-//  var vv1 = $('#errors1').text();
-//  console.log(vv1);
-//    $('#errors1').text('<p>zozo</p>');
-  $('#errors').append('<p>Hé! There are four errors in this form</p>');
-    $('#errors').prepend('<p>There only three errors in this form</p>');
+    $('#userName').before('<span class="error">User name required</span>');
+    $('#userName').after('<span class="error">User name required</span>');
 });
 </script>
 </head>
@@ -36,9 +25,13 @@ $(document).ready(function() {
     <div class="main">
       <h1>Sandbox</h1>
       <div id="container">
-        <div id="errors">
-          <h2>Errors:</h2>
-        </div>
+          <form action="">
+              User name: <input type="text" name="userName" id="userName">
+              <br>
+              User password: <input type="password" name="psw" id="psw">
+              <br>
+              <input type="submit" value="Submit">
+          </form>
       </div>
     </div>
   </div>
