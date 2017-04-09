@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introducing Events</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+</script>
+<script>
+    $(document).ready(function() {
+        $('html').dblclick(function() {
+            alert('ouch');
+        });    // end dblclick
+        $('a').mouseover(function() {
+            var message = "<p>You moused over a link</p>";
+            $('.main').append(message);
+        });    // end mouseover
+        $('#button').click(function() {
+            $(this).val('Stop that!');
+        });    // end click
+        $('#textfield').focus(function() {
+            $(this).css('background-color', 'red');
+        });
+        $(document).click(function(evt) {
+            var xPos = evt.pageX;
+            var yPos = evt.pageY;
+            alert('x:' + xPos + ' y:' + yPos);
+        });    // end click
+        $(document).keypress(function(evt) {
+            var w = evt.which;
+            alert('w:' + w);
+            var k = String.fromCharCode(w);
+            alert('k:' + k);
+        });    // end keypress
+    });    // end ready
+</script>
+</head>
+
+<body id="events">
+    <div class="wrapper">
+        <header>
+            JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+        </header>
+
+        <div class="content">
+            <div class="main">
+                <h1>Introducing Events</h1>
+                <p><a href="#">A Link</a></p>
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>A Form</legend>
+                        <p><input name="button" type="button" id="button" value="A Button"></p>
+                        <p><input name="textfield" id="textfield" type="text"></p></fieldset>
+                </form>
+                <h1 id="top">This is the top</h1>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                a<br>
+                <p><a href="#top">Go to top</a></p>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
