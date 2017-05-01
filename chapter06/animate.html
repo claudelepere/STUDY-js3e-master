@@ -6,16 +6,16 @@
 <link href="../_css/site.css" rel="stylesheet">
 <style>
 #dashboard {
-	width: 110px;
-	background-color: rgb(255,211,224);
-	padding: 20px 20px 0 20px;
-	position: absolute;
-	left: -92px;
-	z-index: 100;
+    width: 110px;
+    background-color: rgb(255,211,224);
+    padding: 20px 20px 0 20px;
+    position: absolute;
+    left: -92px;
+    z-index: 100;
 }
 #dashboard img {
-	margin-bottom: 20px;
-	border: 1px solid rgb(0,0,0);
+    margin-bottom: 20px;
+    border: 1px solid rgb(0,0,0);
 }
 </style>
 <script src="../_js/jquery.min.js"></script>
@@ -25,20 +25,28 @@ $(document).ready(function() {
     $('#dashboard').hover(
         function() {
             console.log('mouseEnter');
-            $(this).animate(
-                {
-                    left: '0',
-                    backgroundColor: 'rgb(27, 45, 94)'
-                },
-                5000,
-                'easeInSine'
-            );  // end animate
+            $(this).stop().animate(
+            {
+                left: '0',
+                backgroundColor: 'rgb(27, 45, 94)'
+            },
+            5000,
+            'easeInSine'
+            );    // end animate
         },
         function() {
             console.log('mouseLeave');
+            $(this).stop().animate(
+            {
+                left: '-92px',
+                backgroundColor: 'rgb(255, 211, 224)'
+            },
+            1500,
+            'easeOutBounce'
+            );    // end animate
         }
-    );  // end hover
-}); // end ready
+    );    // end hover
+});   // end ready
 </script>
 </head>
 <body>
