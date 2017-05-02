@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript &amp; jQuery:The Missing Manual</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1/jquery.min.js"></script>
+//<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+//	    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+//	    crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+//  var v = $('#errors').html();
+//  var v = $('#errors').html('<p>There are four errors in this form</p>');
+//  console.log(v);
+//  var vv = $('#errors').text();
+//  console.log(vv);
+//  $('#errors').text('zozo');
+//  var v1 = $('#errors1').html();
+//  console.log(v1);
+//  var vv1 = $('#errors1').text();
+//  console.log(vv1);
+//    $('#errors1').text('<p>zozo</p>');
+  $('#errors').append('<p>Hé! There are four errors in this form</p>');
+    $('#errors').prepend('<p>There only three errors in this form</p>');
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+  <header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+  <div class="content">
+    <div class="main">
+      <h1>Sandbox</h1>
+      <div id="container">
+        <div id="errors">
+          <h2>Errors:</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+<p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+</footer>
+</body>
+</html>
