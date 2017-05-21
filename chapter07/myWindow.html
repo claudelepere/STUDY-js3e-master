@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Open window</title>
+<link href="../_css/site.css" rel="stylesheet">
+<script src="../_js/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var winref;
+
+    $('.open').click(function(e) {
+        e.preventDefault();
+        winref = open("http://www.google.com", "theWin", "height=500,width=500");
+    });
+
+    $('.close').click(function() {
+        winref.close();
+    });
+
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+<header>
+    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+  </header>
+<div class="content">
+	<div class="main">
+		<h1>Open window</h1>
+        <a class="open" href="">open window</a><br>
+        <a class="close" href="">close window</a>
+	</div>
+</div>
+<footer>
+    <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+</footer>
+</div>
+</body>
+</html>
