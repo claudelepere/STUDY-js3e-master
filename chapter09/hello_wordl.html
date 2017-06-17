@@ -10,8 +10,13 @@
 <script>
 $(document).ready(function() {
     $('#hello').dialog({
-        hide: { effect: 'explode', delay: 250, duration: 1000, easing: 'easeInQuad' },
-        position: 'right center'
+        modal: true,
+        resizable: false,
+        draggable: false,
+//        hide: 'explode'
+//        hide: 'bounce'
+//        hide: 'blinds'
+        hide: 'drop'
     });
 });    // end ready
 </script>>
